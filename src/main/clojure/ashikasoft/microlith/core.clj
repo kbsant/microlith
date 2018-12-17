@@ -10,6 +10,12 @@
    :headers {"Content-Type" "text/html"}
    :body "Hello world"})
 
+;; nRepl -- don't enable this in prod!
+#_ 
+(do
+  (require '[nrepl.server :refer [start-server stop-server]])
+  (defonce server (start-server :port 7888)))
+
 (defn control-server []
   (let [^Scanner scanner (Scanner. System/in)]
     (loop []

@@ -39,6 +39,11 @@
         <artifactId>hiccup</artifactId>
         <version>1.0.5</version>
     </dependency>
+    <dependency>
+        <groupId>nrepl</groupId>
+        <artifactId>nrepl</artifactId>
+        <version>0.5.3</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -63,6 +68,19 @@
           </execution>
         </executions>
       </plugin>
+    <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>ashikasoft.microlith.core</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>

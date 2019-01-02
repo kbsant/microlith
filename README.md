@@ -1,5 +1,5 @@
 # microlith
-A small clojure webstack using maven
+A skeleton web app in clojure using maven
 
 # Usage
 
